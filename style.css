@@ -5,19 +5,8 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #08101e;
-}
-
 header {
-  background-color: #0a121f;
-  height: 100px;
   margin-bottom: 160px;
-}
-
-.container {
-  width: 1146px;
-  margin: 0 auto;
 }
 
 .header__menu {
@@ -25,21 +14,36 @@ header {
   justify-content: center;
 }
 
+.margin, footer, header {
+  background-color: #0a121f;
+  height: 100px;
+}
+
+body {
+  background-color: #08101e;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
 .menu__link {
   text-decoration: none;
-  color: #FFFFFF;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-style: normal;
+  font-family: "Open Sans";
   padding: 40px 20px;
 }
 
 .title3 {
   font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
   font-size: 18px;
+  font-weight: 600;
+  color: #3A68B8;
+  font-style: normal;
   line-height: 160%;
   text-transform: uppercase;
   color: #3A68B8;
@@ -54,24 +58,6 @@ header {
   color: #FFFFFF;
 }
 
-.index__button {
-  background: #3A68B8;
-  border-radius: 5px;
-  padding: 15px 30px;
-  gap: 10px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
-  color: #FFFFFF;
-}
-
-button:hover {
-  background: #FFFFFF;
-  color: #3A68B8;
-}
-
 .main_dc {
   font-family: "Open Sans";
   font-style: normal;
@@ -83,12 +69,29 @@ button:hover {
   margin-top: 40px;
 }
 
-.logo__bar {
-  margin-top: 200px;
+.button__prop {
+  background: #3A68B8;
+  border-radius: 5px;
+  padding: 15px 30px;
+  gap: 10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+.button__hover:hover {
+  background: #FFFFFF;
+  color: #3A68B8;
 }
 
 .button__box {
   margin-top: 50px;
+}
+
+.logo__bar {
+  margin-top: 200px;
 }
 
 .flex__box {
@@ -190,14 +193,10 @@ button:hover {
 }
 
 footer {
-  background-color: #0a121f;
-  height: 100px;
   margin-top: 235px;
   width: 1921px;
   left: 0px;
   top: 4182px;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .title4 {
@@ -216,6 +215,7 @@ footer {
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFF;
+  padding: 10px;
 }
 
 .ftext {
@@ -226,6 +226,7 @@ footer {
   line-height: 16px;
   color: #FFFFFF;
   opacity: 0.6;
+  padding: 10px;
 }
 
 .fa,
@@ -236,4 +237,16 @@ footer {
   order: 0;
   flex-grow: 0;
   color: #FFFFFF;
+}
+
+.down {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 48px;
+}
+
+.secondblock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
