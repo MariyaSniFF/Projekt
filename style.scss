@@ -9,6 +9,128 @@ $background: #3A68B8;
 
 @import "header";
 
+@keyframes myAnim {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes myShakeLeft {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 0 50%;
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes myJello {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes myBounse {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-45px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 @mixin txt ($fs, $fw, $col, $fst) {
     font-size: $fs;
@@ -59,7 +181,6 @@ body {
 }
 
 
-
 .main_dc {
     font-family: 'Open Sans';
     font-style: normal;
@@ -73,7 +194,7 @@ body {
 
 .button {
     &__prop {
-        background: $background;
+        background-color: $background;
         border-radius: 5px;
         padding: 15px 30px;
         gap: 10px;
@@ -83,11 +204,14 @@ body {
         font-size: 20px;
         line-height: 27px;
         color: #FFFFFF;
+        transition: background-color 0.5s, color 0.5s;
+
     }
 
     &__hover:hover {
         background: #FFFFFF;
         color: #3A68B8;
+        transform: scale(2);
     }
 }
 
@@ -101,10 +225,25 @@ body {
     margin-top: 200px;
 }
 
-
 .flex__box {
     display: flex;
     justify-content: space-between;
+}
+
+.logotip1 {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.logotip2 {
+    animation: myShakeLeft 2s ease 0s 1 normal forwards;
+}
+
+.logotip3 {
+    animation: myJello 2s ease 0s 1 normal forwards;
+}
+
+.logotip4 {
+    animation: myBounse 2s ease 0s 1 normal forwards;
 }
 
 .content__left {
