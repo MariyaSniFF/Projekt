@@ -373,7 +373,7 @@ body {
 
 footer {
   margin-top: 235px;
-  width: 1921px;
+  width: 1146px;
   left: 0px;
   top: 4182px;
 }
@@ -420,14 +420,24 @@ footer {
 
 .contfoot {
   display: flex;
-  justify-content: space-around;
   margin-top: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.firsblock {
+  padding: 30px;
 }
 
 .secondblock {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 30px;
+}
+
+.thirdblock {
+  padding: 30px;
 }
 
 @media (max-width: 768px) {
@@ -461,6 +471,17 @@ footer {
     flex-direction: column;
   }
 }
+.carousel {
+  display: flex;
+  justify-items: center;
+}
+
+.carousel-item {
+  width: 450px;
+  height: 450px;
+  margin-left: 800px;
+}
+
 @media (max-width: 375px) {
   .container {
     width: 100%;
